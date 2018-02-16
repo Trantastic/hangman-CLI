@@ -1,0 +1,22 @@
+{
+  "name": "hangman-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "word.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trantastic/hangman-CLI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Trantastic/hangman-CLI/issues"
+  },
+  "homepage": "https://github.com/Trantastic/hangman-CLI#readme",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
+}
