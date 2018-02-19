@@ -1,50 +1,31 @@
-var wordBank = ["finn the human", "jake the dog", "adventure time", "card wars", "everything burrito"];
-var chosenWord = "";
-var blankSpaces = [];
-var printSpaces = "";
-/*
-Psuedo-code:
+var wordBank = ["finn the human", "jake the dog", "adventure time", "card wars", "everything burrito", "lumpy space princess", "tiffany"];
 
-function to startGame
-	-resets userGuesses, runs word function
-function to randomly select from wordBank and replace word.length with _ 
-function to log and store userGuesses, wins & losses
-	-conditional to determine if user wins or loses
+var Word = function(){
 
-*/
-
-
-
-var word = function(){
-
-	console.log("This is running!");
-
+	this.chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+	this.blankSpaces = [];
 	// Selects random word from word bank
 	this.selectWord = function(){
-		// Empties out the global variable if new random word is selected
-		blankSpaces = [];
-
-		chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
-
 		// Replaces selected word.length with blanks
-		var splitWord = chosenWord.split("");
+		var splitWord = this.chosenWord.split("");
 
+		// Replaces each letter with a _ and creates spacing between words
 		for(var i = 0; i < splitWord.length; i++){
-		 	blankSpaces.push("_");
+		 	if(splitWord[i] != " " ){
+		 		this.blankSpaces.push("_");
+		 	}
+		 	else{
+		 		this.blankSpaces.push(" ");
+		 	}
 		}
-
-		printSpaces = blankSpaces.join(" ");
-
+		var printSpaces = this.blankSpaces.join(" ");
+		console.log(printSpaces);
+		console.log("printspace " + printSpaces[0]);
 	};
-
-	// // Replaces selected word.length with blanks
-	// this.replaceWord = function(){
-	// 	 var splitWord = chosenWord.split("");
-
-	// 	 for(var i = 0; i < splitWord.length; i++){
-	// 	 	blankSpaces.push("_ ");
-	// 	 }
-	// }
 };
 
-module.exports = word;
+// Test if function works
+// var newGame = new Word();
+// newGame.selectWord();
+
+module.exports = Word;
