@@ -4,6 +4,7 @@ var Word = function(){
 
 	this.chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 	this.blankSpaces = [];
+	this.printSpaces = "";
 	// Selects random word from word bank
 	this.selectWord = function(){
 		// Replaces selected word.length with blanks
@@ -18,9 +19,9 @@ var Word = function(){
 		 		this.blankSpaces.push(" ");
 		 	}
 		}
-		var printSpaces = this.blankSpaces.join(" ");
-		console.log(printSpaces);
-		console.log("printspace " + printSpaces[0]);
+		// Prints blanks as a string
+		this.printSpaces = this.blankSpaces.join(" ");
+		console.log(this.printSpaces);
 	};
 };
 
