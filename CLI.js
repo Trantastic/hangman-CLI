@@ -44,6 +44,14 @@ function startGame(){
 		}
 		else{
 			newPlay.letterChecker(result.start);
+			// This calling startGame(); again allows user to keep playing until the word is guessed
+			if(newPlay.blanks){
+				startGame();
+			}
+			// I was trying to make it pull another random word after this.blanks is false (which means there are no more blanks or _ left)
+			else if(!newPlay.blanks){
+				newPlay.displayBlanks();
+			}
 		}
 	});
 }

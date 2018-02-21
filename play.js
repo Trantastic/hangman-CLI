@@ -12,7 +12,7 @@ var Play = function(){
 		letterChecker.selectWord();
 	};
 	this.letterChecker = function(letter){
-		letterChecker.selectWord();
+		// letterChecker.selectWord();
 		
 		for(var i = 0; i < letterChecker.blankSpaces.length; i++){
 			if(letterChecker.chosenWord[i] === letter){
@@ -38,6 +38,8 @@ var Play = function(){
 				}
 			}
 		}
+
+		// This is suppose to fire off if user guess is not one of the letters of the selected word.
 		else if(!this.letterInWord){
 			this.guesses.push(letter);
 			this.guessesLeft--;
@@ -48,7 +50,8 @@ var Play = function(){
 		}
 		// If there are no more blanks, cycle to next random word
 		else if(!this.blanks){
-			letterChecker.selectWord(letterChecker.chosenWord);
+			// letterChecker.selectWord(letterChecker.chosenWord);
+			letterChecker.selectWord();
 		}
 		// End function if there are no more guesses left
 		else if(this.guessesLeft === 0){
