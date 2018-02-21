@@ -1,4 +1,5 @@
 var wordBank = ["finn the human", "jake the dog", "adventure time", "card wars", "everything burrito", "lumpy space princess", "tiffany"];
+const chalk = require('chalk');
 
 var Word = function(){
 
@@ -21,7 +22,7 @@ var Word = function(){
 		}
 		// Prints blanks as a string
 		this.printSpaces = this.blankSpaces.join(" ");
-		console.log(this.printSpaces);
+		console.log(chalk.cyan(this.printSpaces));
 	};
 };
 
