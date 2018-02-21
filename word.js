@@ -2,7 +2,6 @@ var wordBank = ["finn the human", "jake the dog", "adventure time", "card wars",
 const chalk = require('chalk');
 
 var Word = function(){
-
 	this.chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 	this.blankSpaces = [];
 	this.printSpaces = "";
@@ -25,9 +24,5 @@ var Word = function(){
 		console.log(chalk.cyan(this.printSpaces));
 	};
 };
-
-// Test if function works
-// var newGame = new Word();
-// newGame.selectWord();
 
 module.exports = Word;
