@@ -6,7 +6,7 @@ This is a hangman game that runs through a computer terminal. All the words are 
 
 __How To Run:__ 
 
-Please see node package to install necessary NPMs. You will need chalk and prompt. To play the game, in your terminal, type _node CLI.js_.
+Please see JSON package to install necessary node packages. You will need chalk and prompt. To play the game, in your terminal, type _node CLI.js_.
 
 __Bugs:__
 
